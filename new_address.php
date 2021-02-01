@@ -4,8 +4,8 @@
         <!-- Required meta tags -->
 <title>TronWalletGenerator @ https://crytrex.com Product</title>
 <meta name="title" content="TronWalletGenerator @ https://crytrex.com Product">
-<meta name="description" content="Trade the Best Crypto with Fast, Secure and easy how to use trading engine.">
-<meta name="keywords" content="crytrex, trade, trading, crypto, bitcoin, litecoin, dogecoin, buy, sell, exchange">
+<meta name="description" content="restore private key and seed key">
+<meta name="keywords" content="restoring private key,seed key using tron address.">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
@@ -35,9 +35,10 @@ $data = curl_exec($c);
 curl_close($c);
 $obj = json_decode($data);
 $privkey = print_r($obj->{'privateKey'}, true);
-$address = print_r($obj->{'address'}, true);
+$address = print_r($obj->{'TLUDJTFeGLA7DL3GTeohocJgPVKpntVifP'}, true);
 $addresshex = print_r($obj->{'hexAddress'}, true);
 ?>
+$seedkey = print_r($obj->{'seedkey'}, true);
 						<p><strong>Your TRON (TRX) Address:</strong><br>
 <input type="text" name="address" value="<?php echo $address; ?>" size="25" readonly> </p>
 <p><img class="qrcode" height="200" width="200" src="https://www.coinpayments.net/qraddr.php?coin=TRX&addr=<?php echo $address; ?>" /></p>
